@@ -1,0 +1,6 @@
+@StoryWriter_HostAddress = http://localhost:5051
+
+GET {{StoryWriter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
