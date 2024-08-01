@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Supabase.Postgrest.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace StoryWriter.Models
 {
     [Supabase.Postgrest.Attributes.Table("stories")]
-    public class Story
+    public class Story : BaseModel
     {
         [Supabase.Postgrest.Attributes.PrimaryKey("id")]
         public int Id { get; set; }

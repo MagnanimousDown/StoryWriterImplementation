@@ -37,8 +37,9 @@ builder.Services.AddAuthentication(options =>
 // Register services
 builder.Services.AddSingleton<EmailService>();
 builder.Services.AddSingleton<SupabaseService>();
-
+builder.Services.AddControllers().AddNewtonsoftJson();
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

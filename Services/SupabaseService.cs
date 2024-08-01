@@ -126,6 +126,13 @@ namespace StoryWriter.Services
             var emailService = new EmailService(_configuration);
             await emailService.SendEmailAsync(email, "Email Verification", emailContent);
         }
+
+        public async Task<IEnumerable<Story>> GetDataAsync(string table)
+        {
+            var query = _supabaseClient.From<Story>().Select("*");
+            var result = await query.Get();
+            return result.Models;
+        }
         /*
         public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {
