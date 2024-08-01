@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StoryWriter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86656767d991dc0df670f8aafaa41e89f5b346bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoryWriter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoryWriter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

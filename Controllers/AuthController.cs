@@ -1,16 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using StoryWriter.Models;
+using StoryWriter.Services;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using StoryWriter.Models;
 using System.Threading.Tasks;
-using StoryWriter.Services;
-using BCrypt.Net;
-
 
 namespace StoryWriter.Controllers
 {
@@ -20,6 +17,7 @@ namespace StoryWriter.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly SupabaseService _supabaseService;
+
         public AuthController(IConfiguration configuration, SupabaseService supabaseService)
         {
             _configuration = configuration;
@@ -31,16 +29,13 @@ namespace StoryWriter.Controllers
         {
             try
             {
-                //Hash the password before saving it in the table
                 var user = await _supabaseService.RegisterUserAsync(request.FirstName, request.LastName, request.Email, request.Password, request.InterestedCategories);
                 if (user == null)
                 {
                     return BadRequest("Registration failed.");
                 }
 
-                // Additional user setup logic can be added here (e.g., assigning roles)
-
-                return Ok("User registered successfully.");
+                return Ok("User registered successfully. Please verify your email.");
             }
             catch (Exception ex)
             {
@@ -64,6 +59,8 @@ namespace StoryWriter.Controllers
             }
             catch (Exception ex)
             {
+                // Log the exception details for debugging
+                Console.WriteLine($"Login error: {ex.Message}");
                 return BadRequest($"Login error: {ex.Message}");
             }
         }
@@ -89,6 +86,7 @@ namespace StoryWriter.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
+
     public class RegisterRequest
     {
         public string FirstName { get; set; }

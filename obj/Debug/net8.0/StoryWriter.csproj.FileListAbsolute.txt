@@ -51,3 +51,9 @@ C:\Users\magna\source\repos\StoryWriter\StoryWriter\obj\Debug\net8.0\StoryWriter
 C:\Users\magna\source\repos\StoryWriter\StoryWriter\obj\Debug\net8.0\StoryWriter.genruntimeconfig.cache
 C:\Users\magna\source\repos\StoryWriter\StoryWriter\obj\Debug\net8.0\ref\StoryWriter.dll
 C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\obj\Debug\net8.0\StoryWriter.sourcelink.json
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\MailKit.dll
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\MimeKit.dll
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\SendGrid.dll
+C:\Users\magna\source\repos\StoryWriter\StoryWriter\bin\Debug\net8.0\StarkbankEcdsa.dll

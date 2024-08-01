@@ -38,6 +38,10 @@ namespace StoryWriter.Models
         [Required]
         [Supabase.Postgrest.Attributes.Column("interestedcategories")]
         public int[] InterestedCategories { get; set; }
-    
+
+        [Required]
+        [Supabase.Postgrest.Attributes.Column("emailconfirmed")]
+        public bool EmailConfirmed { get; set; }
+
     }
 }
